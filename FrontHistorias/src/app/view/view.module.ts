@@ -13,6 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 const routes: Routes = [
   {
@@ -61,7 +62,8 @@ const routes: Routes = [
     MatButtonModule,
     MatCardModule,
     MatInputModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatGridListModule
   ]
 })
 export class ViewModule { }

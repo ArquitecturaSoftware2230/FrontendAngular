@@ -5,3 +5,17 @@
     padding: 0 0 20px 0;
     border: 1px solid #000;
 }
+
+button[color="warn"][mat-stroked-button]{
+    background-color: #C62828;
+    color: white;
+    border-radius: 10px; 
+    font-size: 20px; 
+}
+
+button[color="accent"][mat-stroked-button]{
+    background-color: #2E7D33;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px; 
+}
