@@ -1,13 +1,48 @@
 <app-header>
 </app-header>
 <div style="padding: 30px;">
-    <button mat-stroked-button (click)="redirectToCrearHistoria()">
+    <!-- <button mat-stroked-button (click)="redirectToCrearHistoria()">
         crearHistoria
     </button>
     
     <button mat-stroked-button style="margin-left: 10px;" (click)="redirectToHistoria()">
         ver historia
-    </button>
+    </button> -->
+
+    <h1 style="text-align: center; font-weight: bold;">Bienvenida al sistema de Historias Clinicas</h1>
+    
+        <mat-card class="cards">
+       
+            <h1 style="margin-left: 10px; margin-top: 10px; font-weight: bold; text-align: center;">Iniciar sesión como ciudadano</h1>
+            <form [formGroup]="login">
+                <h3 style="margin: 0 0 0 40px; font-weight: bold;">Tipo de Identificación</h3>
+                <mat-form-field appearance="outline" style="margin-left: 40px; margin-top: 10px; width: 92%;">
+                    <mat-label>Seleccione una opción</mat-label>
+                    <mat-select>          
+                        <mat-option>TI</mat-option>
+                        <mat-option>CC</mat-option>
+                        <mat-option>CE</mat-option>
+                    </mat-select>
+                </mat-form-field>
+    
+                <h3 style="margin: 0 0 0 40px; font-weight: bold;">Numero de Identificación</h3>
+                <mat-form-field appearance="outline"  style="margin-left: 40px; width: 92%;">
+                    <input matInput style="width: 93%;"  type="text" >
+                </mat-form-field>
+    
+                <h3 style="margin: 0 0 0 40px; font-weight: bold;">Contraseña</h3>
+                <mat-form-field appearance="outline"  style="margin-left: 40px; width: 92%;">
+                    <input  matInput style="width: 93%;"  type="password">
+                </mat-form-field>
+            </form>
+    
+            <mat-card-actions>
+                <button mat-stroked-button color="accent" style="margin-left: 40%; display: block;" (click)="redirectToHistoria()">Ingresar</button>
+                <span style="color: #0072BB; font-weight: bold; margin-left: 42%; margin-top: 10px; display: block;">Solicitar contraseña</span>
+            </mat-card-actions>
+        </mat-card>
+    
+   
 </div>
 
 <footer></footer>

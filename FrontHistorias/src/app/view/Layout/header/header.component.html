@@ -1,3 +1,14 @@
 <mat-toolbar class="fondo">
-    Header
+    <div style="width: 49%;"></div>
+    <h1>Header</h1>
+    <span class="example-spacer"></span>
+    <div *ngIf="!entidadLogin">
+        <div *ngIf="inMenu ; then menu else login"></div>
+        <ng-template #login>
+            <a (click)="redirectToLoginEntidad()">Ingresar como entidad</a>
+        </ng-template>
+        <ng-template #menu>
+            <a (click)="redirectToLoginEntidad()">volver</a>
+        </ng-template>
+    </div>
 </mat-toolbar>

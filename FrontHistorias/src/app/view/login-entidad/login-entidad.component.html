@@ -1,0 +1,46 @@
+<app-header>
+</app-header>
+<div style="padding: 30px;">
+    <!-- <button mat-stroked-button (click)="redirectToCrearHistoria()">
+        crearHistoria
+    </button>
+    
+    <button mat-stroked-button style="margin-left: 10px;" (click)="redirectToHistoria()">
+        ver historia
+    </button> -->
+    <div>
+        <button mat-raised-button (click)="redirectToLogin()">Volver</button>
+        <h1 style="margin-left: 10px; margin-top: 10px; font-weight: bold; text-align: center;">Ingresar como entidad
+        </h1>
+    </div>
+    <mat-card class="cards">
+
+        <form>
+            <div style="margin-top: 20px;">
+                <h3 style="margin: 0 0 0 40px; font-weight: bold;">Correo Electronico</h3>
+                <mat-form-field appearance="outline" style="margin-left: 40px; width: 92%;">
+                    <input matInput style="width: 93%;" type="text">
+                </mat-form-field>
+            </div>
+
+            <div>
+                <h3 style="margin: 0 0 0 40px; font-weight: bold;">Contraseña</h3>
+                <mat-form-field appearance="outline" style="margin-left: 40px; width: 92%;">
+                    <input matInput style="width: 93%;" type="password">
+                </mat-form-field>
+            </div>
+
+        </form>
+
+        <mat-card-actions>
+            <button mat-stroked-button color="accent" style="margin-left: 40%; display: block;" (click)="redirectToEntidadMenu()">Ingresar</button>
+            <span
+                style="color: #0072BB; font-weight: bold; margin-left: 42%; margin-top: 10px; display: block;">Solicitar
+                acceso</span>
+        </mat-card-actions>
+    </mat-card>
+
+
+</div>
+
+<footer></footer>

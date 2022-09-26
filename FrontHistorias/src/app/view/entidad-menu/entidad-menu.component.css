@@ -1,0 +1,7 @@
+button[mat-stroked-button]{
+    background-color: #2897D4;
+    color: white;
+    border-radius: 15px;
+    font-size: 15px;
+    width: 150px; 
+}

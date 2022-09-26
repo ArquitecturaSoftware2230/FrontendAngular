@@ -4,3 +4,7 @@
     color: #E5E5E5;
     text-align: centers;
 }
+
+.example-spacer {
+    flex: 1 1 auto;
+  }

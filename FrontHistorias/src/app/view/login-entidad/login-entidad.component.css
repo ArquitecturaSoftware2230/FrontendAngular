@@ -1,7 +1,7 @@
 button[mat-stroked-button]{
     background-color: #2897D4;
     color: white;
-    border-radius: 10px;
+    border-radius: 15px;
     font-size: 15px;
     width: 150px; 
 }
@@ -13,3 +13,11 @@ button[mat-stroked-button]{
     margin-left: 30%;
 }
 
+button[mat-raised-button]{
+    color: #2897D4;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 150px;
+    box-shadow: none; 
+}

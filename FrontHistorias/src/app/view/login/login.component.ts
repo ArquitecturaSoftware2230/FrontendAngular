@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,13 +9,17 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  public login : FormGroup;
+
+  constructor(private router: Router) {
+    this.login = new FormGroup({
+      tipoId : new FormControl('', Validators.required),
+      Id : new FormControl('', Validators.required),
+      contrasena : new FormControl('', Validators.required)
+    })
+   }
 
   ngOnInit(): void {
-  }
-
-  redirectToCrearHistoria(){
-    this.router.navigate(['HistoriaClinica/Main/Crear'])
   }
 
   redirectToHistoria(){

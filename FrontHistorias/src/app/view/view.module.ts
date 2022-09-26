@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BaseComponent } from './Layout/base/base.component';
 import { HeaderComponent } from './Layout/header/header.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CrearHistoriaComponent } from './crear-historia/crear-historia.component';
 import { HistoriaComponent } from './historia/historia.component';
@@ -14,11 +15,23 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSelectModule} from '@angular/material/select';
+import { LoginEntidadComponent } from './login-entidad/login-entidad.component';
+import { EntidadMenuComponent } from './entidad-menu/entidad-menu.component';
+
 
 const routes: Routes = [
   {
     path: "Login",
     component: LoginComponent
+  },
+  {
+    path: "LoginEntidad",
+    component: LoginEntidadComponent
+  },
+  {
+    path: "Menu",
+    component: EntidadMenuComponent
   },
   {
     path: "",
@@ -52,7 +65,9 @@ const routes: Routes = [
     HeaderComponent,
     LoginComponent,
     CrearHistoriaComponent,
-    HistoriaComponent
+    HistoriaComponent,
+    LoginEntidadComponent,
+    EntidadMenuComponent
     
   ],
   imports: [
@@ -63,7 +78,10 @@ const routes: Routes = [
     MatCardModule,
     MatInputModule,
     MatExpansionModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ViewModule { }
