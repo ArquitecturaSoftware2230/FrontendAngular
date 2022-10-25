@@ -12,12 +12,18 @@ import { MatInputModule } from '@angular/material/input';
 
 import { LoginMainScreenComponent } from './login/login-main-screen/login-main-screen.component';
 import { LoginFormComponent } from './login/login-form/login-form.component';
+import { SidebarComponent } from './mainframe/sidebar/sidebar.component';
+import { HeaderComponent } from './mainframe/header/header.component';
+import { LayoutComponent } from './mainframe/layout/layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginMainScreenComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    SidebarComponent,
+    HeaderComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
