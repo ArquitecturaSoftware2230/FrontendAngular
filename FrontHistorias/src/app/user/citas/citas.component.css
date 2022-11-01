@@ -49,12 +49,14 @@
 }
 
 .text{
+ vertical-align: top;
   display: inline-block;
   margin-left: 6vh;
+  margin-top: 1vh;
   color: #0093AB;
   /* border: 1px solid red; */
-  height: 6vh;
-  line-height: 6vh;
+  height: 4vh;
+  line-height: 4vh;
 }
 
 .item{
