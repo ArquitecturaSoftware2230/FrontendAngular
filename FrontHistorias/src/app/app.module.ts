@@ -15,6 +15,9 @@ import { LoginFormComponent } from './login/login-form/login-form.component';
 import { SidebarComponent } from './mainframe/sidebar/sidebar.component';
 import { HeaderComponent } from './mainframe/header/header.component';
 import { LayoutComponent } from './mainframe/layout/layout.component';
+import { HistoriaComponent } from './user/historia/historia.component';
+import { CitasComponent } from './user/citas/citas.component';
+import { ExamenesComponent } from './user/examenes/examenes.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { LayoutComponent } from './mainframe/layout/layout.component';
     LoginFormComponent,
     SidebarComponent,
     HeaderComponent,
-    LayoutComponent
+    LayoutComponent,
+    HistoriaComponent,
+    CitasComponent,
+    ExamenesComponent
   ],
   imports: [
     BrowserModule,
