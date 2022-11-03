@@ -17,7 +17,7 @@ import { HeaderComponent } from './mainframe/header/header.component';
 import { LayoutComponent } from './mainframe/layout/layout.component';
 import { HistoriaComponent } from './user/historia/historia.component';
 import { CitasComponent } from './user/citas/citas.component';
-import { ExamenesComponent } from './user/examenes/examenes.component';
+import { MedicamentosComponent } from './user/medicamentos/medicamentos.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { ExamenesComponent } from './user/examenes/examenes.component';
     LayoutComponent,
     HistoriaComponent,
     CitasComponent,
-    ExamenesComponent
+    MedicamentosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,76 @@
+.title{
+  margin-left: 14vh;
+  margin-right: 10vh;
+  height: 10vh;
+  /* margin-left: 4vh; */
+  /* background-color: red; */
+  color: #0093AB;
+  font-size: 2vh;
+  line-height: 10vh;
+}
+
+.container{
+  margin-left: 10vh;
+  margin-right: 10vh;
+  height: 70vh;
+  overflow-y: auto;
+  /* background-color: aqua; */
+}
+
+.header{
+  display: inline-block;
+  font-weight: 800;
+  color: #0093AB;
+}
+
+.histories{
+  overflow-y: auto;
+}
+
+.content{
+  /* height: 40vh; */
+  width: 100%;
+  border-top: 2px solid #0093AB;
+  border-bottom: 2px solid #0093AB;
+  /* background-color: #0093AB; */
+  display: none;
+  padding-bottom: 10vh;
+}
+
+.collapsible{
+  height: 7vh;
+  width: 100%;
+  background-color: #F1F1F1;
+  margin-top: 1vh;
+  border-radius: 30px;
+}
+
+.collapsible:hover{
+  background-color: #ccc;
+}
+
+.text{
+  display: inline-block;
+  height: 5vh;
+  text-align: center;
+  /* background-color: yellow; */
+  margin-top: 1vh;
+  border-left: 3px solid #0093AB;
+  line-height: 5vh;  /* vertical align */
+}
+
+.edge{
+  border-left: none;
+  display: inline-block;
+  /* background-color: blue; */
+  padding-left: 4vh;
+  text-align: left;
+}
+
+.content-body b{
+  color: rgb(0, 181, 0);
+}
+
+.content-body b:hover{
+  cursor: pointer;
+}
