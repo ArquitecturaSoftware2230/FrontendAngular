@@ -1,83 +1,85 @@
     .container {
-        width: 100%;
-        height: 100%;
-        background-color: #006778;
+      width: 100%;
+      height: 100%;
+      background-color: #006778;
     }
 
     .icon img {
-        margin-top: 20%;
-        margin-left: 15%;
+      margin-top: 20%;
+      margin-left: 15%;
     }
 
     .menuItem {
-        display: flex;
-        padding-left: 15%;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        font-weight: 800;
-        /* border: 1px solid black; */
-        align-items: center;
+      display: flex;
+      padding-left: 15%;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      font-weight: 800;
+      /* border: 1px solid black; */
+      align-items: center;
     }
 
     .middleSide span {
-        color: rgba(0, 0, 0, 0.365);
-        font-size: 2vh;
-        margin-left: 10%;
+      color: rgba(0, 0, 0, 0.44);
+      font-size: 2vh;
+      margin-left: 10%;
     }
 
     ul {
-        list-style: none;
-        /* border: 1px solid red; */
-        padding: 0;
+      list-style: none;
+      /* border: 1px solid red; */
+      padding: 0;
     }
 
     .topSide {
-        width: 100%;
-        height: 30%;
-        background-color: #006778;
+      width: 100%;
+      height: 30%;
+      background-color: #006778;
     }
 
     .middleSide {
-        width: 100%;
-        height: 50%;
-        background-color: #006778;
+      width: 100%;
+      height: 50%;
+      background-color: #006778;
+
     }
 
     .bottomSide {
-        width: 100%;
-        height: 20%;
-        background-color: #006778;
-        color: #FFD124;
-        display: flex;
-        align-items: flex-end;
+      width: 100%;
+      height: 20%;
+      background-color: #006778;
+      color: #FFD124;
+      display: flex;
+      align-items: flex-end;
     }
 
     .bottomSide .menuItem {
-        margin-bottom: 20px;
+      margin-bottom: 20px;
     }
 
     .bottomSide .menuItem span {
-        color: #FFD124;
-        font-size: 1.7vh;
-        margin-left: 10%;
-        opacity: 100%;
-        font-weight: 800;
+      color: #FFD124;
+      font-size: 1.7vh;
+      margin-left: 10%;
+      opacity: 100%;
+      font-weight: 800;
     }
 
     .middleSide .menuItem span:hover {
-        opacity: 100%;
-        color: white;
+      opacity: 100%;
+      color: white;
     }
 
     .bottomSide .menuItem span:hover {
-        font-size: 2vh;
+      font-size: 2vh;
     }
 
     .middleSide .menuItem:hover {
-        background: rgb(0, 103, 120);
-        background: linear-gradient(90deg, rgba(0, 103, 120, 1) 0%, rgba(0, 117, 137, 1) 17%, rgba(0, 125, 146, 1) 33%, rgba(0, 147, 171, 1) 49%);
+      background: rgb(0, 103, 120);
+      background: linear-gradient(90deg, rgba(0, 103, 120, 1) 0%, rgba(0, 117, 137, 1) 17%, rgba(0, 125, 146, 1) 33%, rgba(0, 147, 171, 1) 49%);
     }
 
     .middleSide .menuItem:hover * {
-        color: white;
+      color: white;
+
     }

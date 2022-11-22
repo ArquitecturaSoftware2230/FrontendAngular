@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ConsultasService } from 'src/app/shared/consultas.service';
+
 
 @Component({
   selector: 'app-medicamentos',
@@ -7,9 +9,47 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MedicamentosComponent implements OnInit {
 
-  constructor() { }
+  prescripciones:any[] = [];
+  user:any = {};
+
+  meses:string[] = [
+    'Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+    'Septiembre',
+    'Octubre',
+    'Noviembre',
+    'Diciembre'
+  ];
+
+  constructor(
+    private consultasService: ConsultasService
+  ) { }
 
   ngOnInit(): void {
+
+    this.user = JSON.parse(localStorage.getItem('user')!);
+
+    console.log("Getting prescriptions...");
+    // this.consultasService.getHistoriaByUserId(this.user.cedula).subscribe(
+    this.consultasService.getHistoriaByUserId('1000471976').subscribe(
+      (response) => {
+        console.log("Prescriptions obtained");
+        this.prescripciones = response.prescripciones;
+      }
+    );
+  }
+
+  reclamar(medicamento:any, id:string){
+    const span  = document.getElementById(id);
+    span!.style.display = 'none';
+
+    alert(`Reclamado con éxito: \n\n Se le notificará cuando el medicamento esté disponible: \n ${medicamento.nombre.toUpperCase()} `);
   }
 
   showCardContent(id: string){

@@ -1,0 +1,40 @@
+<div class="container">
+
+  <div class="usuarios">
+    <div class="title">
+      <span class="text" (click)="expandUsers('userContent')">
+        <b>Usuarios:</b>
+      </span>
+      <button (click)="navigateToCreateUser()" class="button-creation">Crear nuevo</button>
+    </div>
+
+    <div id="userContent" class="supressed" style="margin-top: 20px;">
+      <div class="content">
+        <div *ngFor="let user of usuarios" class="item">
+          <span><b>Cedula:</b> {{user.cedula}}</span><br>
+          <span><b>Rol:</b> {{user.rol.nombre}}</span>
+          <hr>
+          <button (click)="deleteUser(user.id)" class="button-delete">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="administradores">
+    <div class="title">
+      <span class="text" (click)="expandUsers('adminContent')">
+        <b>Administradores:</b>
+      </span>
+    </div>
+    <div id="adminContent" class="supressed" style="margin-top: 20px;">
+      <div class="content">
+        <div *ngFor="let admin of admins" class="item">
+          <span><b>Nombre:</b> {{admin.cedula}}</span><br>
+          <span><b>Rol:</b> {{admin.rol.nombre}}</span>
+          <hr>
+          <button (click)="deleteUser(admin.id)" class="button-delete">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

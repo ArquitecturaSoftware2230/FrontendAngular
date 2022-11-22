@@ -1,5 +1,9 @@
 <div class="container">
 
+  <div class="header" style="margin-top:30px">
+    Consultas:
+  </div>
+
   <div class="headers">
     <span class="header" style="padding-left: 4vh; width: 20%;">Mes</span>
     <span class="header" style="width: 10%;">Dia</span>
@@ -9,64 +13,112 @@
 
   <div class="histories">
 
-    <div class="row">
-      <div class="collapsible" (click)="showCardContent('1')" id="1">
+    <div *ngFor="let consulta of historia.consultas;let i = index" class="row">
+      <div class="collapsible" (click)="showCardContent(i.toString())" [id]="i">
         <div class="collapsible-header">
-          <span class="text edge" style="width: 20%;">Febrero</span>
-          <span class="text" style="width: 10%;">13</span>
-          <span class="text" style="width: 12%; border-right: 3px solid #0093AB;">2012</span>
-          <span class="text edge" style="width: 45%;">Medicina General</span>
+          <span class="text edge" style="width: 20%;">{{meses[(+(consulta.fecha.split('-')[1]))-1]}}</span>
+          <span class="text" style="width: 10%;">{{consulta.fecha.split('-')[2].split('T')[0]}}</span>
+          <span class="text"
+            style="width: 12%; border-right: 3px solid #0093AB;">{{consulta.fecha.split('-')[0]}}</span>
+          <span class="text edge" style="width: 45%;">{{consulta.data.motivoConsulta}}</span>
         </div>
       </div>
-      <div class="content" id="1Content"></div>
+      <div class="content" [id]="i + 'Content'">
+        <div class="inner-content">
+
+          <span class="title"> Resumen: </span> <span> {{consulta.data.resumenHistoria}}</span>
+          <hr>
+          <span class="title"> Examen Fisico:  </span><br>
+           <span style="margin-left: 30px">Peso: {{consulta.data.examenFisico.peso}}</span><br>
+           <span style="margin-left: 30px">Estatura: {{consulta.data.examenFisico.estatura}}</span><br>
+           <span style="margin-left: 30px">Notas: {{consulta.data.examenFisico.notas}}</span>
+          <hr>
+          <span class="title"> Diagnostico: </span> <span> {{consulta.data.diagnostico}}</span>
+          <hr>
+          <span class="title"> Descripcion del Paciente: </span> <span> {{consulta.data.descPaciente}}</span>
+          <hr>
+          <span class="title"> Motivo de la Consulta: </span> <span> {{consulta.data.motivoConsulta}}</span>
+          <hr>
+
+        </div>
+      </div>
+
     </div>
 
-    <div class="row">
-      <div class="collapsible" (click)="showCardContent('2')" id="2">
-        <div class="collapsible-header">
-          <span class="text edge" style="width: 20%;">Febrero</span>
-          <span class="text" style="width: 10%;">13</span>
-          <span class="text" style="width: 12%; border-right: 3px solid #0093AB;">2012</span>
-          <span class="text edge" style="width: 45%;">Medicina General</span>
-        </div>
-      </div>
-      <div class="content" id="2Content"></div>
+    <div class="header" style="margin-top:30px">
+      Examenes:
     </div>
 
-    <div class="row">
-      <div class="collapsible" (click)="showCardContent('3')" id="3">
-        <div class="collapsible-header">
-          <span class="text edge" style="width: 20%;">Febrero</span>
-          <span class="text" style="width: 10%;">13</span>
-          <span class="text" style="width: 12%; border-right: 3px solid #0093AB;">2012</span>
-          <span class="text edge" style="width: 45%;">Medicina General</span>
-        </div>
-      </div>
-      <div class="content" id="3Content"></div>
+    <div class="headers">
+      <span class="header" style="padding-left: 4vh; width: 20%;">Mes</span>
+      <span class="header" style="width: 10%;">Dia</span>
+      <span class="header" style="width: 12%;">Año</span>
+      <span class="header" style="width: 20%;">Tarifa</span>
     </div>
 
-    <div class="row">
-      <div class="collapsible" (click)="showCardContent('4')" id="4">
+    <div *ngFor="let examen of historia.examenes;let i = index" class="row">
+      <div class="collapsible" (click)="showCardContent(i + 'exa')" [id]="i +'exa'">
         <div class="collapsible-header">
-          <span class="text edge" style="width: 20%;">Febrero</span>
-          <span class="text" style="width: 10%;">13</span>
-          <span class="text" style="width: 12%; border-right: 3px solid #0093AB;">2012</span>
-          <span class="text edge" style="width: 45%;">Medicina General</span>
+          <span class="text edge" style="width: 20%;">{{meses[(+(examen.fecha.split('-')[1]))-1]}}</span>
+          <span class="text" style="width: 10%;">{{examen.fecha.split('-')[2].split('T')[0]}}</span>
+          <span class="text" style="width: 12%; border-right: 3px solid #0093AB;">{{examen.fecha.split('-')[0]}}</span>
+          <span class="text edge" style="width: 45%;">{{examen.data.tarifa}}</span>
         </div>
       </div>
-      <div class="content" id="4Content"></div>
+
+      <div class="content" [id]="i + 'exaContent'">
+        <div class="inner-content">
+          <span class="title">Medico solicitante: </span><span> {{examen.data.medicoSolicitante}}</span>
+          <hr>
+          <span class="title">Procedimiento: </span><span> {{examen.data.procedimiento}}</span>
+          <hr>
+          <span class="title">Direccion del examen: </span><span> {{examen.data.direccionLaboratorio}}</span>
+          <hr>
+          <span class="title">Indicaciones: </span><span> {{examen.data.indicaciones}}</span>
+          <hr>
+          <span class="title">Tarifa: </span><span> {{examen.data.tarifa}}</span>
+          <hr>
+        </div>
+      </div>
+
     </div>
 
-    <div class="row">
-      <div class="collapsible" (click)="showCardContent('5')" id="5">
+    <div class="header" style="margin-top:30px">
+      Procedimientos:
+    </div>
+
+    <div class="headers">
+      <span class="header" style="padding-left: 4vh; width: 20%;">Mes</span>
+      <span class="header" style="width: 10%;">Dia</span>
+      <span class="header" style="width: 12%;">Año</span>
+      <span class="header" style="width: 20%;">Tarifa</span>
+    </div>
+
+    <div *ngFor="let procedimiento of historia.procedimientoMedico;let i = index" class="row">
+      <div class="collapsible" (click)="showCardContent(i+ 'octa')" [id]="i + 'octa'">
         <div class="collapsible-header">
-          <span class="text edge" style="width: 20%;">Febrero</span>
-          <span class="text" style="width: 10%;">13</span>
-          <span class="text" style="width: 12%; border-right: 3px solid #0093AB;">2012</span>
-          <span class="text edge" style="width: 45%;">Medicina General</span>
+          <span class="text edge" style="width: 20%;">{{meses[(+(procedimiento.fecha.split('-')[1]))-1]}}</span>
+          <span class="text" style="width: 10%;">{{procedimiento.fecha.split('-')[2].split('T')[0]}}</span>
+          <span class="text"
+            style="width: 12%; border-right: 3px solid #0093AB;">{{procedimiento.fecha.split('-')[0]}}</span>
+          <span class="text edge" style="width: 45%;">{{procedimiento.data.tarifa}}</span>
         </div>
       </div>
-      <div class="content" id="5Content"></div>
+      <div class="content" [id]="i + 'octaContent'">
+
+        <div class="inner-content">
+
+          <span class="title">Medico Solicitante: </span><span> {{procedimiento.data.medicoSolicitante}}</span>
+          <hr>
+          <span class="title">Procedimiento: </span><span> {{procedimiento.data.procedimiento}}</span>
+          <hr>
+          <span class="title">Direccion Procedimiento: </span><span> {{procedimiento.data.direccionProcedimiento}}</span>
+          <hr>
+          <span class="title">Indicaciones pre procedimiento: </span><span> {{procedimiento.data.indicacionesAntesProcedimiento}}</span>
+          <hr>
+
+        </div>
+      </div>
     </div>
 
   </div>

@@ -1,0 +1,32 @@
+<div class="container">
+
+  <div class="schedule">
+    <div class="header">
+      <span class="text"> <b>Nuevo Usuario</b> </span>
+    </div>
+    <div class="schedule-body">
+
+      <form [formGroup]="userForm">
+
+        <div style="width: 80%; margin-right: auto; margin-left:auto; margin-top:50px; margin-bottom:50px">
+          <div style="margin: 20px;">
+            <label style="color:#0093AB; " for="nombre"><b>Cedula:</b> </label><br>
+            <input style="border: 1px solid grey; border-radius: 10px; width:100%; padding-right:10px" type="text" formControlName="cedula">
+          </div>
+          <div style="margin: 20px;">
+            <label style="color:#0093AB" for="nombre"><b>Contraseña:</b> </label><br>
+            <input style="border: 1px solid grey; border-radius: 10px; width:100%" type="password" formControlName="contrasenna">
+          </div>
+          <div style="margin: 20px;">
+            <label style="color:#0093AB" for="nombre"><b>Rol:</b> </label><br>
+            <input style="border: 1px solid grey; border-radius: 10px; width:100%" type="text" formControlName="rol_nombre">
+          </div>
+        </div>
+        <div class="footer">
+          <span (click)="createUser()" class="text" style="border-right: 2px solid #0093AB; width: 20%;"> <b>Crear</b>
+          </span>
+        </div>
+      </form>
+
+  </div>
+</div>

@@ -12,16 +12,17 @@
 
   <div class="histories">
 
-    <div class="row">
-      <div class="collapsible" (click)="showCardContent('1')" id="1">
+    <div class="row" *ngFor="let prescripcion of prescripciones; let i = index">
+
+      <div   class="collapsible" (click)="showCardContent(i.toString())" [id]="i">
         <div class="collapsible-header">
-          <span class="text edge" style="width: 25%;">Febrero</span>
-          <span class="text" style="width: 30%;">Felipe Garcia</span>
-          <span class="text" style="width: 30%; ">22 - 10 - 21</span>
+          <span class="text edge" style="width: 25%;">{{meses[(prescripcion.data.vigenciaPrescripcion.split('-')[1])-1]}} {{prescripcion.data.vigenciaPrescripcion.split('-')[0]}}</span>
+          <span class="text" style="width: 30%;">{{prescripcion.data.nombreMedico}}</span>
+          <span class="text" style="width: 30%; ">{{prescripcion.fecha.split('T')[0]}}</span>
         </div>
       </div>
 
-      <div class="content" id="1Content">
+      <div class="content" [id]="i+'Content'">
 
         <div class="headers" style="margin-top: 2vh; margin-bottom:2vh">
           <span class="header" style="padding-left: 4vh; width: 25%;">Medicamento:</span>
@@ -31,16 +32,15 @@
           <span class="header" style="width: 10%;">Via:</span>
         </div>
 
-        <div class="content-body">
-          <span class="text edge" style="width: 25%;">Ibuprofeno</span>
-          <span class="text" style="width: 12%;">10 ml</span>
-          <span class="text" style="width: 12%;">5ml</span>
-          <span class="text" style="width: 15%;">8 horas</span>
-          <span class="text" style="width: 10%; ">Oral</span>
-          <span class="text" style="width: 10%; "><b> Reclamar </b></span>
+        <div *ngFor="let medicamento of prescripcion.data.medicamentos; let a = index" class="content-body" [id]="a.toString() + i.toString()">
+          <span class="text edge" style="width: 25%;">{{medicamento.nombre}}</span>
+          <span class="text" style="width: 12%;">{{medicamento.gramaje}} mg</span>
+          <span class="text" style="width: 12%;">{{medicamento.dosis}}</span>
+          <span class="text" style="width: 15%;">{{medicamento.frecuencia}}</span>
+          <span class="text" style="width: 10%; ">{{medicamento.viaAdministracion}}</span>
+          <span (click)="reclamar(medicamento, a.toString() + i.toString())" class="text" style="width: 10%; "><b> Reclamar </b></span>
         </div>
       </div>
-
     </div>
 
 

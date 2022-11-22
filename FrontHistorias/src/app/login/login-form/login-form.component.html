@@ -4,24 +4,22 @@
         <img src="../../../assets/images/caduceus-symbol.png" alt="Medical Care Icon" width="200">
     </div>
 
-    <div class="formContainer">
-
-        <form action="">
+    <div class="formContainer" >
+        <form action="" [formGroup] = "loginForm">
             <div class="form-group">
                 <label class="loginLabel" for="user">usuario</label><br>
-                <input type="email" class="form-control" id="email">
+                <input type="text" class="form-control" id="email" formControlName="cedula">
             </div>
             <div class="form-group">
                 <label class="loginLabel" for="password">contraseña</label><br>
-                <input type="password" class="form-control" id="password">
+                <input type="password" class="form-control" id="password" formControlName="contrasenna">
             </div>
-          </form>
-          <button type="submit" [routerLink] = "['/user']" >Iniciar Sesión</button>
-
+        </form>
+          <button type="submit" (click)="iniciarSesion()">Iniciar Sesión</button>
     </div>
 
     <div class="formFooter">
-        <span> Necesitas ayuda? </span><a href="#">Contactanos</a>
+        <span> Necesitas ayuda? </span><a >Contactanos</a>
     </div>
 
 </div>

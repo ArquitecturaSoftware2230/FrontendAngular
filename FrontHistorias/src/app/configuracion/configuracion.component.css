@@ -1,0 +1,14 @@
+.container{
+  /* margin-left: 10vh; */
+  /* margin-right: 10vh; */
+  height: 85vh;
+  overflow-y: auto;
+  width: 100%;
+}
+.error{
+  /* background-color: blue; */
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  margin-top: 20vh;
+}

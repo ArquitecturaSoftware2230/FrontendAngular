@@ -8,31 +8,10 @@
 
     <div class="middleSide">
         <ul>
-            <li>
-                <div routerLink="/user/historia" class="menuItem">
-                    <img src="../../../assets/images/checklist.png" alt="" width="12%">
-                    <span>Historia Clinica</span>
-                </div>
-            </li>
-
-            <li>
-                <div routerLink="/user/citas" class="menuItem">
-                    <img src="../../../assets/images/calendar.png" alt="" width="12%">
-                    <span>Citas</span>
-                </div>
-            </li>
-
-            <li>
-                <div routerLink="/user/medicamentos" class="menuItem">
-                    <img src="../../../assets/images/medication.png" alt="" width="12%">
-                    <span>Medicamentos</span>
-                </div>
-            </li>
-
-            <li>
-                <div class="menuItem">
-                    <img src="../../../assets/images/settings.png" alt="" width="12%">
-                    <span>Configuracion</span>
+            <li *ngFor="let text of selectedMenu">
+                <div [routerLink]="'/'+this.user.rol.nombre.toLowerCase() +'/' + text.replace(' ', '').toLowerCase()" class="menuItem">
+                    <img [src]="'../../../assets/images/'+ text.replace(' ', '').toLowerCase() + '.png'" alt="" width="12%">
+                    <span>{{text}}</span>
                 </div>
             </li>
         </ul>
@@ -40,7 +19,7 @@
     <div class="bottomSide">
         <div class="menuItem">
             <img src="../../../assets/images/logout.png" alt="" width="10%">
-            <span>Cerrar Sesion</span>
+            <span (click)="logout()">Cerrar Sesion</span>
         </div>
     </div>
 </div>

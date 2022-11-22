@@ -1,0 +1,27 @@
+{
+  "/consulta/*":
+    {
+      "target": "http://10.43.100.176:3000",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    },
+
+    "/gestor-usuarios/*":
+    {
+      "target": "http://10.43.100.176:3000",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    },
+
+    "/registrar":
+    {
+      "target": "http://10.43.100.176:3000",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    }
+}
+
+

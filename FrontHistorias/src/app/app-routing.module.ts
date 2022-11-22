@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateUserComponent } from './admin/create-user/create-user.component';
+import { UsuariosComponent } from './admin/usuarios/usuarios.component';
+import { ConfiguracionComponent } from './configuracion/configuracion.component';
 import { LoginMainScreenComponent } from './login/login-main-screen/login-main-screen.component';
 import { LayoutComponent } from './mainframe/layout/layout.component';
 import { CitasComponent } from './user/citas/citas.component';
@@ -10,13 +13,20 @@ const routes: Routes = [
   { path: 'login', component: LoginMainScreenComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
-    path: 'user', component: LayoutComponent, children: [
+    path: 'afiliado', component: LayoutComponent, children: [
       { path: 'citas', component: CitasComponent },
-      { path: 'historia', component: HistoriaComponent },
+      { path: 'historiaclinica', component: HistoriaComponent },
       { path: 'medicamentos', component: MedicamentosComponent },
-      { path: 'configuracion', component: MedicamentosComponent },]
+      { path: 'configuracion', component: ConfiguracionComponent },]
   },
-  { path: '**', redirectTo: '/login', pathMatch: 'full' }
+  {
+    path: 'role_admin', component: LayoutComponent, children: [
+      { path: 'usuarios', component: UsuariosComponent },
+      { path: 'configuracion', component: ConfiguracionComponent },
+      { path: 'crearusuario', component: CreateUserComponent }
+    ]
+  },
+  // { path: '**', redirectTo: '/login', pathMatch: 'full' }
 ];
 
 @NgModule({
