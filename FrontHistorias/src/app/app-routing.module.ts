@@ -5,6 +5,7 @@ import { UsuariosComponent } from './admin/usuarios/usuarios.component';
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
 import { LoginMainScreenComponent } from './login/login-main-screen/login-main-screen.component';
 import { LayoutComponent } from './mainframe/layout/layout.component';
+import { ReportesComponent } from './ministerio/reportes/reportes.component';
 import { CitasComponent } from './user/citas/citas.component';
 import { HistoriaComponent } from './user/historia/historia.component';
 import { MedicamentosComponent } from './user/medicamentos/medicamentos.component';
@@ -26,6 +27,12 @@ const routes: Routes = [
       { path: 'crearusuario', component: CreateUserComponent }
     ]
   },
+  {
+    path: 'ministerio', component: LayoutComponent, children: [
+      { path: 'reportes', component: ReportesComponent },
+      { path: 'configuracion', component: ConfiguracionComponent}
+    ]
+  }
   // { path: '**', redirectTo: '/login', pathMatch: 'full' }
 ];
 

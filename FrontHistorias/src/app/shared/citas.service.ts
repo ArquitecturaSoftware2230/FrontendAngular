@@ -12,6 +12,9 @@ export class CitasService {
     private http: HttpClient
   ) { }
 
+  getReportes(): Observable<any> {
+    return this.http.get('/gestor-citas/citas/reporte');
+  }
 
 
 }

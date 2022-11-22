@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CitasService } from 'src/app/shared/citas.service';
+
 
 @Component({
   selector: 'app-reportes',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportesComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private citasService: CitasService
+  ) { }
+
+  data:any = {};
 
   ngOnInit(): void {
+
+    console.log("Obtaining data...");
+
+    this.citasService.getReportes().subscribe(
+      (response) => {
+        this.data = response;
+        console.log("Data obtained");
+      }
+    );
   }
 
 }

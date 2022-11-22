@@ -21,6 +21,14 @@
       "secure": false,
       "logLevel": "debug",
       "changeOrigin": true
+    },
+
+    "/gestor-citas/*":
+    {
+      "target": "http://10.43.100.176:3000",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
     }
 }
 

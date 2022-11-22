@@ -1,0 +1,105 @@
+<div class="container">
+
+  <div class="header">
+    Reporte de citas y estadisticas:
+  </div>
+  <br>
+  <span class="title">Total citas asignadas: </span> <span>{{data.totalCitasAsignadas}}</span>
+  <hr>
+  <span class="title">Espera de asignacion:</span>
+  <hr>
+  <div style="margin-left:10vh">
+    <span class="subtitle"> Endocrinologia: </span><br>
+    <hr>
+    <span class="subsubtitle"> Minimo: </span> <span> {{data.esperaAsignacionMinEndocrinologia}} Horas</span><br>
+    <span class="subsubtitle"> Maximo: </span> <span> {{data.esperaAsignacionMaxEndocrinologia}} Horas </span><br>
+    <hr>
+  </div>
+
+  <div style="margin-left:10vh">
+    <span class="subtitle"> Medicina interna: </span><br>
+    <hr>
+    <span class="subsubtitle"> Minimo: </span> <span> {{data.esperaAsignacionMinMedicinaInterna}} Horas</span><br>
+    <span class="subsubtitle"> Maximo: </span> <span> {{data.esperaAsignacionMaxMedicinaInterna}} Horas </span><br>
+    <hr>
+  </div>
+
+  <div style="margin-left:10vh">
+    <span class="subtitle"> Neurologia: </span><br>
+    <hr>
+    <span class="subsubtitle"> Minimo: </span> <span> {{data.esperaAsignacionMinNeurologia}} Horas</span><br>
+    <span class="subsubtitle"> Maximo: </span> <span> {{data.esperaAsignacionMaxNeurologia}} Horas </span><br>
+    <hr>
+  </div>
+
+  <div style="margin-left:10vh">
+    <span class="subtitle"> Cardiologia: </span><br>
+    <hr>
+    <span class="subsubtitle"> Minimo: </span> <span> {{data.esperaAsignacionMinCardiologia}} Horas</span><br>
+    <span class="subsubtitle"> Maximo: </span> <span> {{data.esperaAsignacionMaxCardiologia}} Horas </span><br>
+    <hr>
+  </div>
+
+  <div style="margin-left:10vh">
+    <span class="subtitle"> Hepatologia: </span><br>
+    <hr>
+    <span class="subsubtitle"> Minimo: </span> <span> {{data.esperaAsignacionMinHepatologia}} Horas</span><br>
+    <span class="subsubtitle"> Maximo: </span> <span> {{data.esperaAsignacionMaxHepatologia}} Horas </span><br>
+  </div>
+
+  <hr>
+  <span class="title">Espera de atencion:</span>
+  <hr>
+  <div style="margin-left:10vh">
+    <span class="subtitle"> Endocrinologia: </span><br>
+    <hr>
+    <span class="subsubtitle"> Minimo: </span> <span> {{data.esperaAtencionMinEndocrinologia}} Horas</span><br>
+    <span class="subsubtitle"> Maximo: </span> <span> {{data.esperaAtencionMaxEndocrinologia}} Horas </span><br>
+
+  </div>
+
+  <hr>
+  <div class="title">Tiempo de especialistas:</div>
+  <hr>
+  <div style="margin-left:10vh">
+    <span class="subtitle"> Endocrinologia: </span><br>
+    <hr>
+    <span class="subsubtitle"> Total: </span> <span> {{data.horasEspecialistaEndocrinologia}} Horas</span><br>
+  </div>
+
+  <div style="margin-left:10vh">
+    <hr>
+    <span class="subtitle"> Neurologia: </span><br>
+    <hr>
+    <span class="subsubtitle"> Total: </span> <span> {{data.horasEspecialistaNeurologia}} Horas</span><br>
+  </div>
+
+  <div style="margin-left:10vh">
+    <hr>
+    <span class="subtitle"> Cardiologia: </span><br>
+    <hr>
+    <span class="subsubtitle"> Total: </span> <span> {{data.horasEspecialistaCardiologia}} Horas</span><br>
+  </div>
+
+  <div style="margin-left:10vh">
+    <hr>
+    <span class="subtitle"> Hepatologia: </span><br>
+    <hr>
+    <span class="subsubtitle"> Total: </span> <span> {{data.horasEspecialistaHepatologia}} Horas</span><br>
+  </div>
+  <hr>
+  <span class="title"> Porcentajes: </span>
+  <hr>
+  <div style="margin-left:10vh">
+    <span class="subtitle"> Asignadas de solicitadas: </span><br>
+    <hr>
+    <span class="subsubtitle"> Porcentaje: </span> <span> {{data.difAsiganadaSolicitadaSobreTotal * 100}} %</span><br>
+    <hr>
+    <span class="subtitle"> Asignadas en espera: </span><br>
+    <hr>
+    <span class="subsubtitle"> Porcentaje: </span> <span> {{(data.difAsignadaEnEsperaSobreTotal * 100)}} %</span><br>
+
+  </div>
+
+
+</div>

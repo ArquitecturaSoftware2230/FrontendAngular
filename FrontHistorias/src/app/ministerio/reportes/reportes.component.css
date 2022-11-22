@@ -1,0 +1,33 @@
+.container{
+  margin-left: 20vh;
+  margin-right: 20vh;
+  height: 80vh;
+  overflow-y: auto;
+  /* background-color: aqua; */
+}
+
+.header{
+  display: inline-block;
+  font-weight: 800;
+  color: #0093AB;
+  margin-bottom: 30px;
+  font-size: 17px;
+}
+
+.title{
+  font-size: 14px;
+  display: inline-block;
+  font-weight: 800;
+}
+
+.subtitle{
+  display: inline-block;
+  font-weight: 800;
+
+}
+
+.subsubtitle{
+  display: inline-block;
+  /* font-weight: 800; */
+  margin-left: 3vh;
+}

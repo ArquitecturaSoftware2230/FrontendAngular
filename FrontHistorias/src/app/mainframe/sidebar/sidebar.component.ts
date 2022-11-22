@@ -43,7 +43,7 @@ export class SidebarComponent implements OnInit {
     if(this.user.rol.nombre.toLowerCase() === 'role_admin'){
       this.selectedMenu = this.menuAdmin;
     }
-    if(this.user.rol.nombre.toLowerCase() === 'role_ministerio'){
+    if(this.user.rol.nombre.toLowerCase() === 'ministerio'){
       this.selectedMenu = this.menuMinisterio;
     }
 
