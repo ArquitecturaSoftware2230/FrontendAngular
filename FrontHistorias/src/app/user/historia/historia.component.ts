@@ -50,8 +50,6 @@ export class HistoriaComponent implements OnInit {
 
   showCardContent(id: string) {
 
-    console.log(id);
-
     const collapsible = document.getElementById(id);
     const content = document.getElementById(id + 'Content');
 
